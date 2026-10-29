@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo Studio Booking</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 350px;
+            margin: 60px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #cccccc;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333333;
+            font-size: 25px;
+        }
+
+        p {
+            text-align: center;
+            color: #666666;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: #4a69bd;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #4a69bd;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #344e91;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Photo Studio Booking</h1>
+        <p>Welcome to our booking page!</p>
+
+        <form action="result.jsp" method="post">
+
+            <label>Client Name:</label>
+            <input type="text" name="client"
+                   maxlength="40" required>
+
+            <label>Event Type:</label>
+            <select name="event_type" required>
+                <option value="Wedding">Wedding</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Pre-wedding">Pre-wedding</option>
+            </select>
+
+            <label>Total Amount:</label>
+            <input type="number" name="total_amt"
+                   min="0" required>
+
+            <label>Advance Paid:</label>
+            <input type="number" name="advance"
+                   min="0" required>
+
+            <button type="submit">Book Now</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
